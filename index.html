@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyalaxmi Kadar | Aspiring DevOps Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <h1>Divyalaxmi Kadar</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/divyalaxmi-kadar-8623a2255" target="_blank" class="btn linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Divyalaxmikadar09" target="_blank" class="btn github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="images/div.jpg" alt="Divyalaxmi Kadar" class="profile-pic">
+            <h2>Hi, I'm Divyalaxmi Kadar 👋</h2>
+            <p class="typing"></p>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="highlight-section">
+        <h2>About Me</h2>
+        <p>
+           I am a passionate DevOps enthusiast committed to contributing to impactful projects.
+           Skilled in Kubernetes, Minikube, Git, CI/CD, and SQL, with a strong interest in learning 
+           new technologies and building solutions that enhance efficiency.
+        </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="highlight-section">
+        <h2>Education</h2>
+        <div class="edu-card">
+            <span class="edu-year">2024</span>
+            <p><strong>Bachelor's Degree</strong> in Electronics And Telecommunication</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="highlight-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fas fa-network-wired"></i>Kubernetes & Minikube</div>
+            <div class="skill-card"><i class="fab fa-docker"></i>Docker</div>
+            <div class="skill-card"><i class="fab fa-git-alt"></i>Git & GitHub</div>
+            <div class="skill-card"><i class="fas fa-cogs"></i>CI/CD with GitHub Actions</div>
+            <div class="skill-card"><i class="fas fa-database"></i>SQL</div>
+            <div class="skill-card"><i class="fas fa-terminal"></i>Linux & Shell Scripting</div>
+            <div class="skill-card"><i class="fab fa-aws"></i>AWS Cloud Services</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="highlight-section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <a href="https://github.com/Divyalaxmikadar09/K8s-Minikube-Cluster" target="_blank" class="project-card">
+                <h3>K8s Minikube Cluster</h3>
+                <p>Deployed applications locally using Kubernetes.</p>
+            </a>
+            <a href="https://github.com/Divyalaxmikadar09/build-a-version-controlled-devops-project-with-git" target="_blank" class="project-card">
+                <h3>Version Controlled DevOps Project</h3>
+                <p>Managed source code using Git & GitHub.</p>
+            </a>
+            <a href="https://github.com/Divyalaxmikadar09/automate-code-deployment-using-cicd-github-actions" target="_blank" class="project-card">
+                <h3>Automated Deployment with GitHub Actions</h3>
+                <p>Set up CI/CD pipeline for automated deployments.</p>
+            </a>
+        </div>
+    </section>
+
+     <!-- Certifications -->
+    <section id="certifications" class="highlight-section">
+        <h2>Certifications</h2>
+        <div class="cert-card">
+            <h3>Cloud Mastery Training & Internship</h3>
+            <p>Completed with Exlearn Technologies — covering Linux system administration, core networking concepts, and AWS Cloud Services.</p>
+            <p class="cert-issue-date">Issued: July 07, 2025</p>
+            <a href="certificates/certificate.pdf" target="_blank" class="btn view-cert">View Certificate</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="highlight-section">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:kadardivyalaxmikadar@gmail.com">kadardivyalaxmikadar@gmail.com</a></p>
+        <p>Phone: 9156602951</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Divyalaxmi Kadar</p>
+    </footer>
+
+    <!-- Typing Animation -->
+    <script>
+        const texts = ["Aspiring DevOps Engineer", "Cloud Enthusiast"];
+        let count = 0, index = 0, currentText = '', letter = '';
+        (function type() {
+            if (count === texts.length) count = 0;
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+            document.querySelector('.typing').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 1000);
+            } else {
+                setTimeout(type, 150);
+            }
+        })();
+    </script>
+</body>
+</html>  
