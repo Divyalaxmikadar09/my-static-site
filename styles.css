@@ -1,68 +1,203 @@
 
+/* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #0077b6;
-    color: white;
-    padding: 20px 0;
+    background: #111;
+    padding: 15px 0;
     text-align: center;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px 0;
+header h1 {
+    color: #ff9800;
+    margin: 0;
 }
 
-h1, h2 {
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
     margin: 10px 0;
 }
 
-.about, .skills, .projects, .contact {
-    background-color: white;
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.linkedin { background: #0a66c2; color: white; }
+.github { background: #333; color: white; }
+
+.btn:hover { opacity: 0.8; }
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ff9800;
+    box-shadow: 0 0 15px #ff9800;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.typing {
+    font-size: 1.3em;
+    color: #ff9800;
+}
+
+/* Sections */
+.highlight-section {
+    background: #111;
+    margin: 20px auto;
     padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+}
+
+.highlight-section h2 {
+    color: #ff9800;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Education */
+.edu-card {
+    background: #222;
+    padding: 15px;
+    border-left: 5px solid #ff9800;
     border-radius: 8px;
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
+.edu-year {
+    font-size: 0.85em;
+    color: #aaa;
 }
 
-ul li {
-    background: #e1f5fe;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 5px;
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
-
-.project-card {
-    background: #f1f1f1;
-    margin: 10px 0;
-    padding: 15px;
-    border-left: 5px solid #0077b6;
-    border-radius: 5px;
-}
-
-a {
-    color: #0077b6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #023e8a;
-    color: white;
+.skill-card {
+    background: #222;
+    padding: 12px;
+    border-radius: 8px;
     text-align: center;
-    padding: 10px 0;
+    transition: transform 0.2s ease, background 0.3s;
+}
+.skill-card i {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #ff9800;
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    background: #333;
+}
+
+/* Projects */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.project-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease, transform 0.2s;
+}
+.project-card:hover {
+    background: #333;
+    transform: scale(1.03);
+}
+
+/* Certifications */
+.cert-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+}
+.cert-issue-date {
+    font-size: 0.85em;
+    color: #aaa;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.view-cert {
+    background: #ff9800;
+    color: #000;
+    padding: 8px 12px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.view-cert:hover {
+    background: #e68900;
+}
+
+/* Contact */
+#contact a {
+    color: #ff9800;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
